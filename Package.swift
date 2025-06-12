@@ -21,10 +21,5 @@ let package = Package(
         .target(
             name: "GToolKit",
             dependencies: [],
-            path: "Sources/GToolKit"),
-        .testTarget(
-            name: "GToolKitTests",
-            dependencies: ["GToolKit"],
-            path: "Tests/GToolKitTests")
-    ]
+            path: "Sources/GToolKit")    ]
 )

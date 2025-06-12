@@ -21,46 +21,6 @@ dependencies: [
 
 ## Uso
 
-### Criando uma View Customizada
-
-```swift
-import GToolKit
-
-class MinhaView: BaseView {
-    //MARK: - Views
-    private let label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    //MARK: - HierarchyBuilder
-    override func buildViewHierarchy() {
-        addSubview(label)
-    }
-    
-    override func setupConstraints() {
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
-    }
-}
-```
-
-### Criando um ViewController
-
-```swift
-import GToolKit
-
-class MeuViewController: BaseViewController<MinhaView> {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Configurações adicionais
-    }
-}
-```
-
 ## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes. 
